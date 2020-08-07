@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Secret files
+src/Masny.Bot/appsettings.json
+src/Masny.Bot/.config/dotnet-tools.json
