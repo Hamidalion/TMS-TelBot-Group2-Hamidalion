@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Masny.Bot.Controllers
+namespace KAI_bank_bot.Controllers
 {
     [ApiController]
     [Route("api/message/update")]

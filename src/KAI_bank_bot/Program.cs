@@ -15,7 +15,11 @@ namespace KAI_bank_bot
         {
             CreateHostBuilder(args).Build().Run();
         }
-
+        /// <summary>
+        /// Поднимаем веб сервис
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
