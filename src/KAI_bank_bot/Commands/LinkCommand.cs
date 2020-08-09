@@ -1,12 +1,12 @@
-﻿using Masny.Bot.Interfaces;
-using Masny.Bot.Resources;
+﻿using KAI_bank_bot.Interfaces;
+using KAI_bank_bot.Resources;
 using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace Masny.Bot.Commands
+namespace KAI_bank_bot.Commands
 {
     /// <inheritdoc cref="ITelegramCommand"/>
     public class LinkCommand : ITelegramCommand

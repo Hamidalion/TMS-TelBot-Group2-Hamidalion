@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Masny.Bot.Resources {
+namespace KAI_bank_bot.Resources {
     using System;
     
     

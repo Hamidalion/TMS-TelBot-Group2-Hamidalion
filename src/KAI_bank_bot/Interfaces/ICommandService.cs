@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Masny.Bot.Interfaces
+namespace KAI_bank_bot.Interfaces
 {
     /// <summary>
     /// Commands management service.

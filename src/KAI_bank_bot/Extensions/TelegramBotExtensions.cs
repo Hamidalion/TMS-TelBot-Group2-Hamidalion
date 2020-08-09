@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 
-namespace Masny.Bot.Extensions
+namespace KAI_bank_bot.Extensions
 {
     /// <summary>
     /// TelegramBot extension method.

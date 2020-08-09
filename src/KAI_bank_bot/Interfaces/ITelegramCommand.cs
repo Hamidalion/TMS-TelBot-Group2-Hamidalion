@@ -2,7 +2,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Masny.Bot.Interfaces
+namespace KAI_bank_bot.Interfaces
 {
     /// <summary>
     /// Telegram command.

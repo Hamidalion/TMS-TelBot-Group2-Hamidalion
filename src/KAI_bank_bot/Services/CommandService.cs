@@ -1,8 +1,8 @@
-﻿using Masny.Bot.Commands;
-using Masny.Bot.Interfaces;
+﻿using KAI_bank_bot.Commands;
+using KAI_bank_bot.Interfaces;
 using System.Collections.Generic;
 
-namespace Masny.Bot.Services
+namespace KAI_bank_bot.Services
 {
     /// <inheritdoc cref="ICommandService"/>
     public class CommandService : ICommandService
