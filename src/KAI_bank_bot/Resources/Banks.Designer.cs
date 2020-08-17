@@ -70,6 +70,24 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to /banks.
+        /// </summary>
+        public static string Link {
+            get {
+                return ResourceManager.GetString("Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n.
+        /// </summary>
+        public static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://myfin.by/currency/minsk.
         /// </summary>
         public static string MyFinURL {
@@ -93,6 +111,16 @@ namespace KAI_bank_bot.Resources {
         public static string Separator {
             get {
                 return ResourceManager.GetString("Separator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;b&gt;Банк                          USD                           EUR                           RUB                           EUR to USD          &lt;/b&gt;\n
+        ///&lt;i&gt;                                  покупка   продажа  покупка   продажа покупка   продажа  покупка   продажа&lt;/i&gt;.
+        /// </summary>
+        public static string TableHeader {
+            get {
+                return ResourceManager.GetString("TableHeader", resourceCulture);
             }
         }
     }

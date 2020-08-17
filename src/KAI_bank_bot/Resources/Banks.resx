@@ -120,6 +120,12 @@
   <data name="ErrorMessage" xml:space="preserve">
     <value>Failed to parse information - {0}</value>
   </data>
+  <data name="Link" xml:space="preserve">
+    <value>/banks</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n</value>
+  </data>
   <data name="MyFinURL" xml:space="preserve">
     <value>https://myfin.by/currency/minsk</value>
   </data>
@@ -128,5 +134,9 @@
   </data>
   <data name="Separator" xml:space="preserve">
     <value>!</value>
+  </data>
+  <data name="TableHeader" xml:space="preserve">
+    <value>&lt;b&gt;Банк                          USD                           EUR                           RUB                           EUR to USD          &lt;/b&gt;\n
+&lt;i&gt;                                  покупка   продажа  покупка   продажа покупка   продажа  покупка   продажа&lt;/i&gt;</value>
   </data>
 </root>
