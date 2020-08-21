@@ -6,6 +6,10 @@ namespace KAI_bank_bot.Interfaces
 {
     public interface IMyFinParsingService
     {
+        /// <summary>
+        /// Parse site.
+        /// </summary>
+        /// <returns>Collection of banks</returns>
         Task<IEnumerable<BankCurrencies>> Parse();
     }
 }

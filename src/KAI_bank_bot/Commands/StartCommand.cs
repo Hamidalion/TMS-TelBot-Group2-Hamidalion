@@ -17,7 +17,7 @@ namespace KAI_bank_bot.Commands
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             var chatId = message.Chat.Id;
-            await client.SendTextMessageAsync(chatId, $"{Start.Message} \U0001F369");
+            await client.SendTextMessageAsync(chatId, $"{Start.Message}");
         }
 
         /// <inheritdoc/>

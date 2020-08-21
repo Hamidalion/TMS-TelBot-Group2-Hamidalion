@@ -11,7 +11,7 @@ namespace KAI_bank_bot.Commands
     public class GetRateByNbrbOnDateCommand : ITelegramCommand
     {
         /// <inheritdoc/>
-        public string Name { get; } = About.Name;
+        public string Name { get; } = GetRateByNbrbOnDateCommand.Name;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
