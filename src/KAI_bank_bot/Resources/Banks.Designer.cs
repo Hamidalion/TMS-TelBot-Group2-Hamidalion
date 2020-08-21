@@ -22,14 +22,14 @@ namespace KAI_bank_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Common {
+    public class Banks {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Common() {
+        internal Banks() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KAI_bank_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Masny.Bot.Resources.Common", typeof(Common).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.Banks", typeof(Banks).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,66 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ChatId: {0}, Text: {1}.
+        ///   Looks up a localized string similar to Failed to parse information - {0}.
+        /// </summary>
+        public static string ErrorMessage {
+            get {
+                return ResourceManager.GetString("ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /banks.
+        /// </summary>
+        public static string Link {
+            get {
+                return ResourceManager.GetString("Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n.
         /// </summary>
         public static string Message {
             get {
                 return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://myfin.by/currency/minsk.
+        /// </summary>
+        public static string MyFinURL {
+            get {
+                return ResourceManager.GetString("MyFinURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//tr/td/span.
+        /// </summary>
+        public static string Path {
+            get {
+                return ResourceManager.GetString("Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to !.
+        /// </summary>
+        public static string Separator {
+            get {
+                return ResourceManager.GetString("Separator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;b&gt;Банк                          USD                           EUR                           RUB                           EUR to USD          &lt;/b&gt;\n
+        ///&lt;i&gt;                                  покупка   продажа  покупка   продажа покупка   продажа  покупка   продажа&lt;/i&gt;.
+        /// </summary>
+        public static string TableHeader {
+            get {
+                return ResourceManager.GetString("TableHeader", resourceCulture);
             }
         }
     }

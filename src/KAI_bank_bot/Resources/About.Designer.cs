@@ -39,7 +39,7 @@ namespace KAI_bank_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Masny.Bot.Resources.About", typeof(About).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.About", typeof(About).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,33 +57,6 @@ namespace KAI_bank_bot.Resources {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /about.
-        /// </summary>
-        public static string Link {
-            get {
-                return ResourceManager.GetString("Link", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This is open source project. See details here:.
-        /// </summary>
-        public static string Message {
-            get {
-                return ResourceManager.GetString("Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://is.gd/7VsAoV.
-        /// </summary>
-        public static string ShortLink {
-            get {
-                return ResourceManager.GetString("ShortLink", resourceCulture);
             }
         }
     }

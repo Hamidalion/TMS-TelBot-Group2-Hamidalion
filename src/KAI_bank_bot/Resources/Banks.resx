@@ -117,13 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Exception" xml:space="preserve">
-    <value>Hmm.. This is not a link, try sending something else!</value>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Failed to parse information - {0}</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>/banks</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>Keep a simplified link: {0}</value>
+    <value>Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n</value>
   </data>
-  <data name="Text" xml:space="preserve">
-    <value>/link</value>
+  <data name="MyFinURL" xml:space="preserve">
+    <value>https://myfin.by/currency/minsk</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>.//tr/td/span</value>
+  </data>
+  <data name="Separator" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="TableHeader" xml:space="preserve">
+    <value>&lt;b&gt;Банк                          USD                           EUR                           RUB                           EUR to USD          &lt;/b&gt;\n
+&lt;i&gt;                                  покупка   продажа  покупка   продажа покупка   продажа  покупка   продажа&lt;/i&gt;</value>
   </data>
 </root>

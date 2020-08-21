@@ -22,14 +22,14 @@ namespace KAI_bank_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Link {
+    public class BankCommand {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Link() {
+        internal BankCommand() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KAI_bank_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Masny.Bot.Resources.Link", typeof(Link).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.BankCommand", typeof(BankCommand).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,33 +57,6 @@ namespace KAI_bank_bot.Resources {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hmm.. This is not a link, try sending something else!.
-        /// </summary>
-        public static string Exception {
-            get {
-                return ResourceManager.GetString("Exception", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Keep a simplified link: {0}.
-        /// </summary>
-        public static string Message {
-            get {
-                return ResourceManager.GetString("Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /link.
-        /// </summary>
-        public static string Text {
-            get {
-                return ResourceManager.GetString("Text", resourceCulture);
             }
         }
     }

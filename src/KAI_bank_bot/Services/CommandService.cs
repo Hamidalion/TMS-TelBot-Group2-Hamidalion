@@ -18,7 +18,8 @@ namespace KAI_bank_bot.Services
             {
                 new StartCommand(),
                 new AboutCommand(),
-                new LinkCommand()
+                new LinkCommand(),
+                new ParseBanksCommand()
             };
         }
 

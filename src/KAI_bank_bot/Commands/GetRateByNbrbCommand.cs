@@ -8,7 +8,7 @@ using Telegram.Bot.Types.Enums;
 namespace KAI_bank_bot.Commands
 {
     /// <inheritdoc cref="ITelegramCommand"/>
-    public class AboutCommand : ITelegramCommand
+    public class GetRateByNbrbCommand : ITelegramCommand
     {
         /// <inheritdoc/>
         public string Name { get; } = About.Name;
@@ -17,7 +17,7 @@ namespace KAI_bank_bot.Commands
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             var chatId = message.Chat.Id;
-            await client.SendTextMessageAsync(chatId , );
+            await client.SendTextMessageAsync(chatId, );
         }
 
         /// <inheritdoc/>
