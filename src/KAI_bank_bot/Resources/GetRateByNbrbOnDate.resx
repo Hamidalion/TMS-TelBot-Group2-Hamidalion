@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>"This bot is used to get acquainted with the exchange rate of the National Bank for today and on a specific date. The bot is also used to find the best exchange rate (USD, EUR, RUB) in the banks of Minsk"</value>
+    <value>"gets the national bank rate to a certain currency on a certain day"</value>
   </data>
   <data name="Link" xml:space="preserve">
-    <value>/about</value>
+    <value>/getRateOnDate</value>
   </data>
 </root>

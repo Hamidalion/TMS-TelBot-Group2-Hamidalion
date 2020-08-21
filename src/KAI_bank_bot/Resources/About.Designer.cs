@@ -59,5 +59,23 @@ namespace KAI_bank_bot.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;This bot is used to get acquainted with the exchange rate of the National Bank for today and on a specific date. The bot is also used to find the best exchange rate (USD, EUR, RUB) in the banks of Minsk&quot;.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /about.
+        /// </summary>
+        public static string Link {
+            get {
+                return ResourceManager.GetString("Link", resourceCulture);
+            }
+        }
     }
 }

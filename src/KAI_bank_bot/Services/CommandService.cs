@@ -18,7 +18,7 @@ namespace KAI_bank_bot.Services
             {
                 new StartCommand(),
                 new AboutCommand(),
-                new BanksCommand(),
+                new GetMinskRatesCommand(),
                 new GetRateByNbrbOnDateCommand(),
                 new GetRateByNbrbCommand()
             };

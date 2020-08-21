@@ -120,9 +120,6 @@
   <data name="ErrorMessage" xml:space="preserve">
     <value>Failed to parse information - {0}</value>
   </data>
-  <data name="Link" xml:space="preserve">
-    <value>/banks</value>
-  </data>
   <data name="Message" xml:space="preserve">
     <value>Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n</value>
   </data>

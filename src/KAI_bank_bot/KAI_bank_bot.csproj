@@ -21,25 +21,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>About.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\BankCommand.Designer.cs">
+    <Compile Update="Resources\GetMinskRates.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>BankCommand.resx</DependentUpon>
+      <DependentUpon>GetMinskRates.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\Banks.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Banks.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\GetRateByNbrbCommand.Designer.cs">
+    <Compile Update="Resources\GetRateByNbrb.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>GetRateByNbrbCommand.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Start.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Start.resx</DependentUpon>
+      <DependentUpon>GetRateByNbrb.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -48,21 +43,17 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>About.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\BankCommand.resx">
+    <EmbeddedResource Update="Resources\GetMinskRates.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BankCommand.Designer.cs</LastGenOutput>
+      <LastGenOutput>GetMinskRates.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Banks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Banks.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\GetRateByNbrbCommand.resx">
+    <EmbeddedResource Update="Resources\GetRateByNbrb.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>GetRateByNbrbCommand.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Start.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Start.Designer.cs</LastGenOutput>
+      <LastGenOutput>GetRateByNbrb.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

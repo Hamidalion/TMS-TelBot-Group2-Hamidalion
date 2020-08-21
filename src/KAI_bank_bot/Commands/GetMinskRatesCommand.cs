@@ -14,10 +14,10 @@ using Telegram.Bot.Types.Enums;
 namespace KAI_bank_bot.Commands
 {
     /// <inheritdoc cref="ITelegramCommand"/>
-    public class BanksCommand : ITelegramCommand
+    public class GetMinskRatesCommand : ITelegramCommand
     {
         /// <inheritdoc/>
-        public string Name { get; } = Banks.Link;
+        public string Name { get; } = GetMinskRates.Link;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)

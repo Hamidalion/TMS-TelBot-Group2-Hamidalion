@@ -70,15 +70,6 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /banks.
-        /// </summary>
-        public static string Link {
-            get {
-                return ResourceManager.GetString("Link", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Курсы основных валют в банках Минска на данный момент (источник - MyFin.by)\n.
         /// </summary>
         public static string Message {
