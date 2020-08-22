@@ -97,7 +97,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @ , Илья - @Hamidalion.
+        ///   Ищет локализованную строку, похожую на Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @dakamakat , Илья - @Hamidalion.
         /// </summary>
         public static string Message4 {
             get {
