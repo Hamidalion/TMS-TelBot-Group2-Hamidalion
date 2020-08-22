@@ -7,7 +7,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["KAI_bank_bot.csproj", "KAI_bank_bot/"]
-RUN dotnet restore "./KAI_bank_bot.csproj"
+RUN dotnet restore "KAI_bank_bot/KAI_bank_bot.csproj"
 WORKDIR "/src/KAI_bank_bot"
 COPY . .
 RUN dotnet build "KAI_bank_bot.csproj" -c Release -o /app/build
@@ -20,3 +20,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet KAI_bank_bot.dll
+
+
+
+
