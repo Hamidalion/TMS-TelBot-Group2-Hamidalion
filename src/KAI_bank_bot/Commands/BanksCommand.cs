@@ -20,9 +20,6 @@ namespace KAI_bank_bot.Commands
         public string Name { get; } = Banks.Link;
 
         /// <inheritdoc/>
-        public bool Contains(Message message) => message.Type == MessageType.Text && message.Text.Contains(Name);
-
-        /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             MinskBankService minskBankService = new MinskBankService();
@@ -30,5 +27,8 @@ namespace KAI_bank_bot.Commands
             var result = minskBankService.GetMinskRates();
             await client.SendTextMessageAsync(chatId, result.ToString(), ParseMode.Html);
         }
+
+        /// <inheritdoc/>
+        public bool Contains(Message message) => message.Type == MessageType.Text && message.Text.Contains(Name);
     }
 }

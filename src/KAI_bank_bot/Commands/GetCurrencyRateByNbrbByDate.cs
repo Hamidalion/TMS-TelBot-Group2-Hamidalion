@@ -18,8 +18,7 @@ namespace KAI_bank_bot.Commands
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             NbrbRates nbrbRate = new NbrbRates();
-            var chatId = message.Chat.Id;
-           
+            var chatId = message.Chat.Id;          
             var result = await nbrbRate.GetRateByNbrbOnDate(message,client);
             foreach (var rate in result)
             {
