@@ -33,15 +33,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Currencies.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\RatesNow.Designer.cs">
+    <Compile Update="Resources\RatesToday.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>RatesNow.resx</DependentUpon>
+      <DependentUpon>RatesToday.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\RatesByDate.Designer.cs">
+    <Compile Update="Resources\RatesDate.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>RatesByDate.resx</DependentUpon>
+      <DependentUpon>RatesDate.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -58,13 +58,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Currencies.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\RatesNow.resx">
+    <EmbeddedResource Update="Resources\RatesToday.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RatesNow.Designer.cs</LastGenOutput>
+      <LastGenOutput>RatesToday.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\RatesByDate.resx">
+    <EmbeddedResource Update="Resources\RatesDate.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RatesByDate.Designer.cs</LastGenOutput>
+      <LastGenOutput>RatesDate.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -10,7 +10,7 @@ namespace KAI_bank_bot.Commands
 {
     public class RatesNow : ITelegramCommand
     {
-        public string Name { get; } = NbrbRate.Name;
+        public string Name { get; } = RatesToday.Name;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
