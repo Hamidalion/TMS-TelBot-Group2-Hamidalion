@@ -22,6 +22,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Banks.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\About.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -53,6 +54,7 @@
     <EmbeddedResource Update="Resources\Banks.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Banks.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\About.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>About.Designer.cs</LastGenOutput>
