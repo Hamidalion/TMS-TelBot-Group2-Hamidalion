@@ -23,18 +23,24 @@ namespace KAI_bank_bot.Models
             {
                 throw new ArgumentException();
             }
-            BankCurrencies bankCurrencies = new BankCurrencies
-            {
-                BankName = elements[0],
-                USDBuyRate = double.Parse(elements[1], CultureInfo.InvariantCulture.NumberFormat),
-                USDSaleRate = double.Parse(elements[2], CultureInfo.InvariantCulture.NumberFormat),
-                EURBuyRate = double.Parse(elements[3], CultureInfo.InvariantCulture.NumberFormat),
-                EURSaleRate = double.Parse(elements[4], CultureInfo.InvariantCulture.NumberFormat),
-                RUBBuyRate = double.Parse(elements[5], CultureInfo.InvariantCulture.NumberFormat),
-                RUBSaleRate = double.Parse(elements[6], CultureInfo.InvariantCulture.NumberFormat),
-                EURToUSDBuyRate = double.Parse(elements[7], CultureInfo.InvariantCulture.NumberFormat),
-                EURToUSDSaleRate = double.Parse(elements[8], CultureInfo.InvariantCulture.NumberFormat)
-            };
+            BankCurrencies bankCurrencies = new BankCurrencies();
+            double val;
+            double.TryParse(elements[1], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.USDBuyRate = val;
+            double.TryParse(elements[2], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.USDSaleRate = val;
+            double.TryParse(elements[3], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.EURBuyRate = val;
+            double.TryParse(elements[4], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.EURSaleRate = val;
+            double.TryParse(elements[5], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.RUBBuyRate = val;
+            double.TryParse(elements[6], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.RUBSaleRate = val;
+            double.TryParse(elements[7], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.EURToUSDBuyRate = val;
+            double.TryParse(elements[8], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
+            bankCurrencies.EURToUSDSaleRate = val;
             return bankCurrencies;
         }
 
