@@ -25,16 +25,10 @@ namespace KAI_bank_bot.Commands
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
+            MinskBankService minskBankService = new MinskBankService();
             var chatId = message.Chat.Id;
-            IMyFinParsingService myFinParsingService = new MyFinParsingService();
-            List<BankCurrencies> bankCurrencies = (List<BankCurrencies>)await myFinParsingService.Parse();
-            StringBuilder botMessage = new StringBuilder(Banks.Message);
-            botMessage.Append(Banks.TableHeader);
-            foreach(var b in bankCurrencies)
-            {
-                botMessage.Append(b.ToString() + "\n");
-            }
-            await client.SendTextMessageAsync(chatId, botMessage.ToString(), ParseMode.Html);
+            var result = minskBankService.GetMinskRates();
+            await client.SendTextMessageAsync(chatId, result.ToString(), ParseMode.Html);
         }
     }
 }
