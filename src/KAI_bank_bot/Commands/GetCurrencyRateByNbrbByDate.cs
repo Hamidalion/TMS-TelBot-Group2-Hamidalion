@@ -1,4 +1,5 @@
-﻿using KAI_bank_bot.Resources;
+﻿using KAI_bank_bot.Interfaces;
+using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
-    public class GetCurrencyRateByNbrbByDate
+    public class GetCurrencyRateByNbrbByDate : ITelegramCommand
     {
         public string Name { get; } = NbrbRateByDate.Name;
 

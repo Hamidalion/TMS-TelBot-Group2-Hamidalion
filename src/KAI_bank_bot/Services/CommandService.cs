@@ -17,9 +17,9 @@ namespace KAI_bank_bot.Services
             _commands = new List<ITelegramCommand>
             {
                 new AboutCommand(),
-                new LinkCommand(),
                 new BanksCommand(),
-                new GetCurrnecyRateByNbrb()
+                new GetCurrnecyRateByNbrb(),
+                new GetCurrencyRateByNbrbByDate()
             };
         }
 
