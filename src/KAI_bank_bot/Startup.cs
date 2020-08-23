@@ -51,9 +51,11 @@ namespace KAI_bank_bot
             //добавляем возможности маршрутизации
             app.UseRouting();
 
+            // устанавливаем адреса, которые будут обрабатываться
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+
                 endpoints.MapHealthChecks("/health");
             });
         }

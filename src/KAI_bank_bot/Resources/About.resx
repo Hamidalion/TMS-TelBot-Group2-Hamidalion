@@ -121,9 +121,15 @@
     <value>/about</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>This is open source project. See details here:</value>
+    <value>Здравствуйте. </value>
   </data>
-  <data name="ShortLink" xml:space="preserve">
-    <value>https://is.gd/7VsAoV</value>
+  <data name="Message2" xml:space="preserve">
+    <value>Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курса Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки.</value>
+  </data>
+  <data name="Message3" xml:space="preserve">
+    <value>Команды:</value>
+  </data>
+  <data name="Message4" xml:space="preserve">
+    <value>Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @dakamakat , Илья - @Hamidalion</value>
   </data>
 </root>
