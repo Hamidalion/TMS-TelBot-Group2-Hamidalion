@@ -8,7 +8,7 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
-    public class GetCurrnecyRateByNbrb : ITelegramCommand
+    public class RatesNow : ITelegramCommand
     {
         public string Name { get; } = NbrbRate.Name;
 
