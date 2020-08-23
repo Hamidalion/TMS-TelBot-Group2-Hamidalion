@@ -12,27 +12,13 @@ namespace KAI_bank_bot.Commands
     public class LinkCommand : ITelegramCommand
     {
         /// <inheritdoc/>
-        public string Name { get; } = Link.Text;
+        public string Name { get; } = Link.Name;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            var text = string.Empty;
-
-            try
-            {
-                var link = await @is.gd.Url.GetShortenedUrl(message.Text);
-                text = string.Format($"\U0001F525 {Link.Message}", link);
-            }
-            catch (Exception ex)
-            {
-                text = $"{Link.Exception} \U0001F4A9";
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                await client.SendTextMessageAsync(message.Chat.Id, text);
-            }
+            var chatId = message.Chat.Id;
+            await client.SendTextMessageAsync(chatId, Link.About);
         }
 
         /// <inheritdoc/>
