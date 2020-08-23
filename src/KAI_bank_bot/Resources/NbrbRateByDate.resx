@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Message" xml:space="preserve">
-    <value>ChatId: {0}, Text: {1}</value>
+  <data name="About" xml:space="preserve">
+    <value>"Команда получает курс валют от нац банка РБ на указанную дату</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>/getRateByDateNbrb</value>
   </data>
 </root>
