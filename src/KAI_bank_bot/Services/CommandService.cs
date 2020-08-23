@@ -18,7 +18,8 @@ namespace KAI_bank_bot.Services
             {
                 new AboutCommand(),
                 new LinkCommand(),
-                new BanksCommand()
+                new BanksCommand(),
+                new GetCurrnecyRateByNbrb()
             };
         }
 

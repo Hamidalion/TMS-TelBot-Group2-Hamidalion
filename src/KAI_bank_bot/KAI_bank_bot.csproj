@@ -38,10 +38,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Link.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Resource.Designer.cs">
+    <Compile Update="Resources\NbrbRate.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>NbrbRate.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\Start.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -67,9 +67,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Link.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Resource.resx">
+    <EmbeddedResource Update="Resources\NbrbRate.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>NbrbRate.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Start.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
