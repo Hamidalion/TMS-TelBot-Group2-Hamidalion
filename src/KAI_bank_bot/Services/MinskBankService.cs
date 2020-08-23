@@ -11,18 +11,11 @@ namespace KAI_bank_bot.Services
 {
     public class MinskBankService
     {
-        public async Task<StringBuilder> GetMinskRates()
+        public async Task<List<BankCurrencies>> GetMinskRates()
         {
             IMyFinParsingService myFinParsingService = new MyFinParsingService();
             List<BankCurrencies> bankCurrencies = (List<BankCurrencies>)await myFinParsingService.Parse();
-            StringBuilder botMessage = new StringBuilder(Banks.Message);
-            botMessage.Append(Banks.TableHeader);
-            foreach (var b in bankCurrencies)
-            {
-               var result = botMessage.Append(b.ToString() + "\n");
-                return result;
-            }
-            return null;
+            return bankCurrencies;
         }
     }
 }

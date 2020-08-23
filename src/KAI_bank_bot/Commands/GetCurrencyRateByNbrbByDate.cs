@@ -2,8 +2,6 @@
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -19,11 +17,20 @@ namespace KAI_bank_bot.Commands
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             NbrbRates nbrbRate = new NbrbRates();
-            var chatId = message.Chat.Id;          
-            var result = await nbrbRate.GetRateByNbrbOnDate(message,client);
-            foreach (var rate in result)
+            var chatId = message.Chat.Id;
+            var usCulture = new System.Globalization.CultureInfo("ru-RU");
+            var usermessage = message.Text.Split(" ")[1];       
+            if (DateTime.TryParse(usermessage, usCulture.DateTimeFormat, System.Globalization.DateTimeStyles.None, out DateTime userDate))
             {
-                await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name} \n Курс валюты : {rate.Cur_OfficialRate} \n Скейл валюты : {rate.Cur_Scale}  \n Дата : {rate.Date} \n \n");
+                var result = await nbrbRate.GetRateByNbrbOnDate(userDate);
+                foreach (var rate in result)
+                {
+                    await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name} \n Курс валюты : {rate.Cur_OfficialRate} \n Скейл валюты : {rate.Cur_Scale}  \n Дата : {rate.Date} \n \n");
+                }
+            }
+            else
+            {
+                await client.SendTextMessageAsync(chatId, "Неверный формат даты");
             }
         }
         /// <inheritdoc/>   

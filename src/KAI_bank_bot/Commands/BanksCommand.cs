@@ -1,11 +1,6 @@
 ﻿using KAI_bank_bot.Interfaces;
-using KAI_bank_bot.Models;
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -24,8 +19,13 @@ namespace KAI_bank_bot.Commands
         {
             MinskBankService minskBankService = new MinskBankService();
             var chatId = message.Chat.Id;
-            var result = minskBankService.GetMinskRates();
-            await client.SendTextMessageAsync(chatId, result.ToString(), ParseMode.Html);
+            var result = await minskBankService.GetMinskRates();
+            string concatmessage = string.Empty;
+            foreach (var bank in result)
+            {
+                concatmessage += bank.ToString() + "\n";
+            }
+            await client.SendTextMessageAsync(chatId, concatmessage);
         }
 
         /// <inheritdoc/>

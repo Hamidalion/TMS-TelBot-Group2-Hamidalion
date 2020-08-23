@@ -1,9 +1,6 @@
 ﻿using KAI_bank_bot.Interfaces;
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;

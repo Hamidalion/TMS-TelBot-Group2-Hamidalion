@@ -1,12 +1,9 @@
-﻿using KAI_bank_bot.Helpers;
-using KAI_bank_bot.Interfaces;
+﻿using KAI_bank_bot.Interfaces;
 using KAI_bank_bot.Models;
+using KAI_bank_bot.Resources;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Telegram.Bot;
-using Telegram.Bot.Types;
 
 namespace KAI_bank_bot.Services
 {
@@ -16,30 +13,23 @@ namespace KAI_bank_bot.Services
         {
             IRequestService requestService = new RequestService();
             List<Rate> rates = new List<Rate>();
-            var eurrate = await requestService.GetRateAsync(CurrencyCode.EUR.ToString());
-            var rubrate = await requestService.GetRateAsync(CurrencyCode.RUB.ToString());
-            var usdrate = await requestService.GetRateAsync(CurrencyCode.USD.ToString());
+            var eurrate = await requestService.GetRateAsync(Currencies.EUR);
+            var rubrate = await requestService.GetRateAsync(Currencies.RUB);
+            var usdrate = await requestService.GetRateAsync(Currencies.USD);
             rates.Add(eurrate);
             rates.Add(rubrate);
             rates.Add(usdrate);
             return rates;
         }
-        public async Task<List<Rate>> GetRateByNbrbOnDate(Message message , ITelegramBotClient client)
+        public async Task<List<Rate>> GetRateByNbrbOnDate(DateTime userDate)
         {
             IRequestService requestService = new RequestService();
             List<Rate> rates = new List<Rate>();
-            var usCulture = new System.Globalization.CultureInfo("ru-RU");
-            await client.SendTextMessageAsync(message.Chat.Id, "Format: " + usCulture.DateTimeFormat.ShortDatePattern);
-            Message messagewithDate = new Message();
-            if (DateTime.TryParse(messagewithDate.Text, usCulture.DateTimeFormat, System.Globalization.DateTimeStyles.None, out DateTime userDate))
-                await client.SendTextMessageAsync(message.Chat.Id ,"Valid date entered:" + userDate.ToShortDateString());
-            else
-                await client.SendTextMessageAsync(message.Chat.Id , "Invalid date specified!");
             if (userDate <= DateTime.Today)
             {
-                var eurrate = await requestService.GetRateByDateAsync(CurrencyCode.EUR.ToString(), userDate);
-                var rubrate = await requestService.GetRateByDateAsync(CurrencyCode.RUB.ToString(), userDate);
-                var usdrate = await requestService.GetRateByDateAsync(CurrencyCode.USD.ToString(), userDate);
+                var eurrate = await requestService.GetRateByDateAsync(Currencies.EUR, userDate);
+                var rubrate = await requestService.GetRateByDateAsync(Currencies.RUB, userDate);
+                var usdrate = await requestService.GetRateByDateAsync(Currencies.USD, userDate);
                 rates.Add(eurrate);
                 rates.Add(rubrate);
                 rates.Add(usdrate);

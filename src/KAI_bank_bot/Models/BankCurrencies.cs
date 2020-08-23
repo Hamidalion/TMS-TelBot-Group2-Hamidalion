@@ -24,6 +24,7 @@ namespace KAI_bank_bot.Models
                 throw new ArgumentException();
             }
             BankCurrencies bankCurrencies = new BankCurrencies();
+            bankCurrencies.BankName = elements[0];
             double val;
             double.TryParse(elements[1], NumberStyles.Any, CultureInfo.InvariantCulture.NumberFormat, out val);
             bankCurrencies.USDBuyRate = val;
