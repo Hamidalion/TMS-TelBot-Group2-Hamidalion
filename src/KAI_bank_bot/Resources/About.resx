@@ -118,13 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Message" xml:space="preserve">
-    <value>"Здравствуйте. "</value>
+    <value>Здравствуйте. </value>
   </data>
   <data name="Message2" xml:space="preserve">
-    <value>"Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курса Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки."</value>
+    <value>Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курсу Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки.
+
+</value>
   </data>
   <data name="Message3" xml:space="preserve">
-    <value>"Команды:"</value>
+    <value>Команды: 1 - /about 
+                   2 - /banks  
+                   3 - /rates  
+                   4 - /ratesbydate</value>
   </data>
   <data name="Message4" xml:space="preserve">
     <value>Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @dakamakat , Илья - @Hamidalion</value>
@@ -133,6 +138,6 @@
     <value>/about</value>
   </data>
   <data name="Sites" xml:space="preserve">
-    <value>Used sites: "1 - https://myfin.by/ \n 2 - https://www.nbrb.by/"</value>
+    <value>Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/</value>
   </data>
 </root>

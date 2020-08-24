@@ -61,7 +61,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Команда получает курс валют от нац банка РБ на указанную дату.
+        ///   Looks up a localized string similar to Команда получает курс валют от нац банка РБ на указанную дату.
         /// </summary>
         public static string About {
             get {
@@ -70,7 +70,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ratesbydate.
+        ///   Looks up a localized string similar to /rateondate.
         /// </summary>
         public static string Name {
             get {

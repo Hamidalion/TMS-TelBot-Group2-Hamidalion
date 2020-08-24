@@ -61,7 +61,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Здравствуйте. &quot;.
+        ///   Looks up a localized string similar to Здравствуйте. .
         /// </summary>
         public static string Message {
             get {
@@ -70,7 +70,9 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курса Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки.&quot;.
+        ///   Looks up a localized string similar to Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курсу Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки.
+        ///
+        ///.
         /// </summary>
         public static string Message2 {
             get {
@@ -79,7 +81,10 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Команды:&quot;.
+        ///   Looks up a localized string similar to Команды: 1 - /about 
+        ///                   2 - /banks  
+        ///                   3 - /rates  
+        ///                   4 - /ratesbydate.
         /// </summary>
         public static string Message3 {
             get {
@@ -106,7 +111,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Used sites: &quot;1 - https://myfin.by/ \n 2 - https://www.nbrb.by/&quot;.
+        ///   Looks up a localized string similar to Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/.
         /// </summary>
         public static string Sites {
             get {
