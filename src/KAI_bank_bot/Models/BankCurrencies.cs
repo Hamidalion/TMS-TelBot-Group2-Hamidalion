@@ -47,7 +47,7 @@ namespace KAI_bank_bot.Models
 
         public override string ToString()
         {
-            return string.Format($"{BankName,-30}{USDBuyRate,-10}{USDSaleRate,-10}{EURBuyRate,-10}{EURSaleRate,-10}" +
+            return string.Format($"{BankName,-30}\n{USDBuyRate,-10}{USDSaleRate,-10}{EURBuyRate,-10}{EURSaleRate,-10}" +
                 $"{RUBBuyRate,-10}{RUBSaleRate,-10}{EURToUSDBuyRate,-10}{EURToUSDSaleRate,-10}");
         }
     }

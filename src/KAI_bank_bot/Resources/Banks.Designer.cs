@@ -113,15 +113,5 @@ namespace KAI_bank_bot.Resources {
                 return ResourceManager.GetString("Separator", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;b&gt;Банк                          USD                           EUR                           RUB                           EUR to USD          &lt;/b&gt;\n
-        ///&lt;i&gt;                                  покупка   продажа  покупка   продажа покупка   продажа  покупка   продажа&lt;/i&gt;.
-        /// </summary>
-        public static string TableHeader {
-            get {
-                return ResourceManager.GetString("TableHeader", resourceCulture);
-            }
-        }
     }
 }
