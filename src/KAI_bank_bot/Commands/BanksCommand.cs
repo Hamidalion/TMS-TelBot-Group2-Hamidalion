@@ -28,7 +28,6 @@ namespace KAI_bank_bot.Commands
                     $"USD:Продажа - {bank.USDSaleRate} USD:Покупка - {bank.USDBuyRate}\nRUB:Продажа - {bank.RUBSaleRate} RUB:Покупка - {bank.EURBuyRate}\n" +
                     $"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD:Покупка - {bank.EURToUSDBuyRate}\n");
             }
-            
         }
 
         /// <inheritdoc/>

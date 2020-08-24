@@ -12,13 +12,12 @@ namespace KAI_bank_bot.Services
         public async Task<List<Rate>> GetRateByNbrbOnToday()
         {
             IRequestService requestService = new RequestService();
-            List<Rate> rates = new List<Rate>();
-            var eurrate = await requestService.GetRateAsync(Currencies.EUR);
-            var rubrate = await requestService.GetRateAsync(Currencies.RUB);
-            var usdrate = await requestService.GetRateAsync(Currencies.USD);
-            rates.Add(eurrate);
-            rates.Add(rubrate);
-            rates.Add(usdrate);
+            List<Rate> rates = new List<Rate>
+            {
+                await requestService.GetRateAsync(Currencies.EUR),
+                await requestService.GetRateAsync(Currencies.RUB),
+                await requestService.GetRateAsync(Currencies.USD)
+            };
             return rates;
         }
         public async Task<List<Rate>> GetRateByNbrbOnDate(DateTime userDate)
@@ -27,12 +26,9 @@ namespace KAI_bank_bot.Services
             List<Rate> rates = new List<Rate>();
             if (userDate <= DateTime.Today)
             {
-                var eurrate = await requestService.GetRateByDateAsync(Currencies.EUR, userDate);
-                var rubrate = await requestService.GetRateByDateAsync(Currencies.RUB, userDate);
-                var usdrate = await requestService.GetRateByDateAsync(Currencies.USD, userDate);
-                rates.Add(eurrate);
-                rates.Add(rubrate);
-                rates.Add(usdrate);
+                rates.Add(await requestService.GetRateByDateAsync(Currencies.EUR, userDate));
+                rates.Add(await requestService.GetRateByDateAsync(Currencies.RUB, userDate));
+                rates.Add(await requestService.GetRateByDateAsync(Currencies.USD, userDate));
                 return rates;
             }
             return null;
