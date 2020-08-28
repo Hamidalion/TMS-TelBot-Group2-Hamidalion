@@ -27,7 +27,7 @@ namespace KAI_bank_bot.Commands
                     var result = await nbrbRate.GetRateByNbrbOnDate(userDate);
                     foreach (var rate in result)
                     {
-                        await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name}\n{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate}\nДата : {rate.Date}BYN\n\n");
+                        await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name}\n{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate} BYN\nДата : {rate.Date}\n\n");
                     }
                 }
                 else
