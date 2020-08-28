@@ -16,24 +16,45 @@ namespace KAI_bank_bot.Commands
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            NbrbRates nbrbRate = new NbrbRates();
-            var chatId = message.Chat.Id;
-            var usCulture = new System.Globalization.CultureInfo("ru-RU");
-            var usermessage = message.Text.Split(" ")[1];       
-            if (DateTime.TryParse(usermessage, usCulture.DateTimeFormat, System.Globalization.DateTimeStyles.None, out DateTime userDate))
+            try
             {
-                var result = await nbrbRate.GetRateByNbrbOnDate(userDate);
-                foreach (var rate in result)
+                NbrbRates nbrbRate = new NbrbRates();
+                var chatId = message.Chat.Id;
+                var usCulture = new System.Globalization.CultureInfo("ru-RU");
+                var usermessage = message.Text.Split(" ")[1];
+                if (DateTime.TryParse(usermessage, usCulture.DateTimeFormat, System.Globalization.DateTimeStyles.None, out DateTime userDate))
                 {
-                    await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name}\n{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate}\nДата : {rate.Date}BYN\n\n");
+                    var result = await nbrbRate.GetRateByNbrbOnDate(userDate);
+                    foreach (var rate in result)
+                    {
+                        await client.SendTextMessageAsync(chatId, $"Имя валюты : {rate.Cur_Name}\n{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate}\nДата : {rate.Date}BYN\n\n");
+                    }
+                }
+                else
+                {
+                    await client.SendTextMessageAsync(chatId, "Неверный формат даты");
                 }
             }
-            else
+            catch (IndexOutOfRangeException)
             {
-                await client.SendTextMessageAsync(chatId, "Неверный формат даты");
+                var chatId = message.Chat.Id;
+                await client.SendTextMessageAsync(chatId, Exeptions.RangeExeption);
             }
+            catch (Exception)
+            {
+                var chatId = message.Chat.Id;
+                await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+            }
+            
         }
         /// <inheritdoc/>   
-        public bool Contains(Message message) => message.Type == MessageType.Text && message.Text.Contains(Name);
+        public bool Contains(Message message)
+        {
+            if (message != null)
+            {
+                return message.Type == MessageType.Text && message.Text.Contains(Name);
+            }
+            return false;
+        }
     }
 }

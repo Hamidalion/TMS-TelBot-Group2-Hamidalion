@@ -1,8 +1,7 @@
 ﻿using KAI_bank_bot.Interfaces;
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
-using System.Linq;
-using System.Text;
+using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -19,18 +18,34 @@ namespace KAI_bank_bot.Commands
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            MinskBankService minskBankService = new MinskBankService();
-            var chatId = message.Chat.Id;
-            var result = await minskBankService.GetMinskRates();
-            foreach (var bank in result)
+            try
             {
-                await client.SendTextMessageAsync(chatId, $"Имя банка: {bank.BankName}\nEUR:Продажа - {bank.EURSaleRate} EUR:Покупка - {bank.EURBuyRate}\n" +
-                    $"USD:Продажа - {bank.USDSaleRate} USD:Покупка - {bank.USDBuyRate}\nRUB:Продажа - {bank.RUBSaleRate} RUB:Покупка - {bank.EURBuyRate}\n" +
-                    $"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD:Покупка - {bank.EURToUSDBuyRate}\n");
+                MinskBankService minskBankService = new MinskBankService();
+                var chatId = message.Chat.Id;
+                var result = await minskBankService.GetMinskRates();
+                foreach (var bank in result)
+                {
+                    await client.SendTextMessageAsync(chatId, $"Имя банка: {bank.BankName}\nEUR:Продажа - {bank.EURSaleRate} EUR:Покупка - {bank.EURBuyRate}\n" +
+                        $"USD:Продажа - {bank.USDSaleRate} USD:Покупка - {bank.USDBuyRate}\nRUB:Продажа - {bank.RUBSaleRate} RUB:Покупка - {bank.EURBuyRate}\n" +
+                        $"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD:Покупка - {bank.EURToUSDBuyRate}\n");
+                }
             }
+            catch (Exception)
+            {
+                var chatId = message.Chat.Id;
+                await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+            }
+           
         }
 
         /// <inheritdoc/>
-        public bool Contains(Message message) => message.Type == MessageType.Text && message.Text.Contains(Name);
+        public bool Contains(Message message)
+        {
+            if(message != null)
+            {
+                return message.Type == MessageType.Text && message.Text.Contains(Name);
+            }
+            return false;
+        }
     }
 }

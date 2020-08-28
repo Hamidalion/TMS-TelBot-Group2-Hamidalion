@@ -22,14 +22,14 @@ namespace KAI_bank_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class About {
+    public class Exeptions {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal About() {
+        internal Exeptions() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KAI_bank_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.About", typeof(About).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.Exeptions", typeof(Exeptions).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,61 +61,29 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Здравствуйте. .
+        ///   Looks up a localized string similar to Incorrect date entered.
         /// </summary>
-        public static string Message {
+        public static string DateExeption {
             get {
-                return ResourceManager.GetString("Message", resourceCulture);
+                return ResourceManager.GetString("DateExeption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курсу Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки.
-        ///
-        ///.
+        ///   Looks up a localized string similar to Wrong data entered.
         /// </summary>
-        public static string Message2 {
+        public static string OtherExeption {
             get {
-                return ResourceManager.GetString("Message2", resourceCulture);
+                return ResourceManager.GetString("OtherExeption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Команды: 1 - /start
-        ///                   2 - /banks  
-        ///                   3 - /rates  
-        ///                   4 - /ratesbydate.
+        ///   Looks up a localized string similar to Enter a date in format dd/mm/yyyy.
         /// </summary>
-        public static string Message3 {
+        public static string RangeExeption {
             get {
-                return ResourceManager.GetString("Message3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @dakamakat , Илья - @Hamidalion.
-        /// </summary>
-        public static string Message4 {
-            get {
-                return ResourceManager.GetString("Message4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/.
-        /// </summary>
-        public static string Sites {
-            get {
-                return ResourceManager.GetString("Sites", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /start.
-        /// </summary>
-        public static string Start {
-            get {
-                return ResourceManager.GetString("Start", resourceCulture);
+                return ResourceManager.GetString("RangeExeption", resourceCulture);
             }
         }
     }

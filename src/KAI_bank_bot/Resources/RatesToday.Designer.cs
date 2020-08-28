@@ -70,7 +70,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /rates.
+        ///   Looks up a localized string similar to /ratesnow.
         /// </summary>
         public static string Name {
             get {

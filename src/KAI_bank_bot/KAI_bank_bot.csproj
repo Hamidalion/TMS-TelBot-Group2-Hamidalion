@@ -33,6 +33,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Currencies.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Exeptions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Exeptions.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\RatesToday.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -57,6 +62,10 @@
     <EmbeddedResource Update="Resources\Currencies.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Currencies.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Exeptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exeptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\RatesToday.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -121,6 +121,6 @@
     <value>Команда получает курс валют от нац банка РБ на сегодня.</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>/rates</value>
+    <value>/ratesnow</value>
   </data>
 </root>

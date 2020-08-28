@@ -1,5 +1,4 @@
 ﻿using KAI_bank_bot.Interfaces;
-using KAI_bank_bot.Resources;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
