@@ -61,7 +61,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Incorrect date entered.
+        ///   Ищет локализованную строку, похожую на Введены неверные данные.
         /// </summary>
         public static string DateExeption {
             get {
@@ -70,7 +70,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Wrong data entered, try again.
+        ///   Ищет локализованную строку, похожую на Данных на эту дату нет.
         /// </summary>
         public static string OtherExeption {
             get {
@@ -79,7 +79,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter a date in format mm/dd/yyyy.
+        ///   Ищет локализованную строку, похожую на Введен неверный формат даты. Необходим следующий формат месяц/дата/год.
         /// </summary>
         public static string RangeExeption {
             get {
