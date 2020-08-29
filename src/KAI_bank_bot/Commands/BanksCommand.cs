@@ -25,8 +25,8 @@ namespace KAI_bank_bot.Commands
                 var result = await minskBankService.GetMinskRates();
                 foreach (var bank in result)
                 {
-                    await client.SendTextMessageAsync(chatId, $"{bank.BankName}\nПокупка/Продажа\nEUR: {bank.EURBuyRate} BYN / {bank.EURSaleRate} BYN \n" +
-                        $"RUB: {bank.EURBuyRate} BYN / {bank.RUBSaleRate} BYN \nUSD: {bank.USDBuyRate} BYN / {bank.USDSaleRate} BYN \n" );
+                    await client.SendTextMessageAsync(chatId, $"{bank.BankName}\nПокупка/Продажа\n1 EUR: {bank.EURBuyRate} BYN / {bank.EURSaleRate} BYN \n" +
+                        $"100 RUB: {bank.EURBuyRate} BYN / {bank.RUBSaleRate} BYN \n1 USD: {bank.USDBuyRate} BYN / {bank.USDSaleRate} BYN \n" );
                         //$"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD: Покупка - {bank.EURToUSDBuyRate}\n");
                 }
             }
