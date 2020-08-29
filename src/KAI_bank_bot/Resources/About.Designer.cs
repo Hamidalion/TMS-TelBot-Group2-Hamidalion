@@ -62,7 +62,6 @@ namespace KAI_bank_bot.Resources {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Здравствуйте.
-        ///.
         /// </summary>
         public static string Message {
             get {
@@ -71,7 +70,7 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилуший для покупки.
+        ///   Ищет локализованную строку, похожую на Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилучший для покупки
         ///.
         /// </summary>
         public static string Message2 {
@@ -82,10 +81,10 @@ namespace KAI_bank_bot.Resources {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Команды: 
-        ////start
-        ////banks  
-        ////ratesnow
-        ////ratesondate (например  /ratesondate 12.03.2019).
+        ///    /start
+        ///    /banks  
+        ///    /ratesnow
+        ///    /ratesondate (например  /ratesondate 12.03.2019).
         /// </summary>
         public static string Message3 {
             get {
@@ -95,9 +94,9 @@ namespace KAI_bank_bot.Resources {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Над ботом работали: 
-        ///Екатерина @Lesnoybolvan2 
-        ///Артур @dakamakat  
-        ///Илья @Hamidalion.
+        ///    Екатерина @Lesnoybolvan2 
+        ///    Артур @dakamakat  
+        ///    Илья @Hamidalion.
         /// </summary>
         public static string Message4 {
             get {

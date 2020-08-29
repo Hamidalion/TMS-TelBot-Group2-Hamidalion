@@ -118,25 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Message" xml:space="preserve">
-    <value>Здравствуйте.
-</value>
+    <value>Здравствуйте</value>
   </data>
   <data name="Message2" xml:space="preserve">
-    <value>Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилуший для покупки.
+    <value>Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилучший для покупки
 </value>
   </data>
   <data name="Message3" xml:space="preserve">
     <value>Команды: 
-/start
-/banks  
-/ratesnow
-/ratesondate (например  /ratesondate 12.03.2019)</value>
+    /start
+    /banks  
+    /ratesnow
+    /ratesondate (например  /ratesondate 12.03.2019)</value>
   </data>
   <data name="Message4" xml:space="preserve">
     <value>Над ботом работали: 
-Екатерина @Lesnoybolvan2 
-Артур @dakamakat  
-Илья @Hamidalion</value>
+    Екатерина @Lesnoybolvan2 
+    Артур @dakamakat  
+    Илья @Hamidalion</value>
   </data>
   <data name="Sites" xml:space="preserve">
     <value>Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/</value>
