@@ -23,7 +23,7 @@ namespace KAI_bank_bot.Commands
                 var result = await nbrbRates.GetRateByNbrbOnToday();
                 foreach (var rate in result)
                 {
-                    await client.SendTextMessageAsync(chatId,  $" {rate.Cur_Scale} {rate.Cur_Abbreviation}  =  {rate.Cur_OfficialRate} BYN\nДата : {rate.Date} \n \n");
+                    await client.SendTextMessageAsync(chatId,  $" {rate.Cur_Scale} {rate.Cur_Abbreviation}  =  {rate.Cur_OfficialRate} BYN\n\n");
                 }
             }
             catch (Exception)
