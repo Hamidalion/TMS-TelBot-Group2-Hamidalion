@@ -121,9 +121,9 @@
     <value>Incorrect date entered</value>
   </data>
   <data name="OtherExeption" xml:space="preserve">
-    <value>Wrong data entered</value>
+    <value>Wrong data entered, try again</value>
   </data>
   <data name="RangeExeption" xml:space="preserve">
-    <value>Enter a date in format dd/mm/yyyy</value>
+    <value>Enter a date in format mm/dd/yyyy</value>
   </data>
 </root>

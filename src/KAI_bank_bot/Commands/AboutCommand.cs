@@ -20,7 +20,7 @@ namespace KAI_bank_bot.Commands
             try
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, $"{About.Message} {About.Message2} {About.Message3}");
+                await client.SendTextMessageAsync(chatId,$"{About.Message}{About.Message2}\n{About.Message3}\n\n{About.Message4}\n");
             }
             catch (Exception)
             {
