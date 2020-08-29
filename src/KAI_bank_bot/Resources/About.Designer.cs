@@ -81,10 +81,11 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Команды: /start
-        ///                     /banks  
-        ///                     /ratesnow
-        ///                     /ratesondate (например  /ratesondate 12.03.2019).
+        ///   Ищет локализованную строку, похожую на Команды: 
+        ////start
+        ////banks  
+        ////ratesnow
+        ////ratesondate (например  /ratesondate 12.03.2019).
         /// </summary>
         public static string Message3 {
             get {
@@ -94,22 +95,13 @@ namespace KAI_bank_bot.Resources {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Над ботом работали: 
-        ///                     Екатерина @Lesnoybolvan2 
-        ///                     Артур @dakamakat  
-        ///                     Илья @Hamidalion.
+        ///Екатерина @Lesnoybolvan2 
+        ///Артур @dakamakat  
+        ///Илья @Hamidalion.
         /// </summary>
         public static string Message4 {
             get {
                 return ResourceManager.GetString("Message4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/.
-        /// </summary>
-        public static string Sites {
-            get {
-                return ResourceManager.GetString("Sites", resourceCulture);
             }
         }
         
