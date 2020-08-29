@@ -106,6 +106,15 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/.
+        /// </summary>
+        public static string Sites {
+            get {
+                return ResourceManager.GetString("Sites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на /start.
         /// </summary>
         public static string Start {

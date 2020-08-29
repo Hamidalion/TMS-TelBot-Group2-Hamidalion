@@ -126,16 +126,17 @@
 </value>
   </data>
   <data name="Message3" xml:space="preserve">
-    <value>Команды: /start
-                     /banks  
-                     /ratesnow
-                     /ratesondate (например  /ratesondate 12.03.2019)</value>
+    <value>Команды: 
+/start
+/banks  
+/ratesnow
+/ratesondate (например  /ratesondate 12.03.2019)</value>
   </data>
   <data name="Message4" xml:space="preserve">
     <value>Над ботом работали: 
-                     Екатерина @Lesnoybolvan2 
-                     Артур @dakamakat  
-                     Илья @Hamidalion</value>
+Екатерина @Lesnoybolvan2 
+Артур @dakamakat  
+Илья @Hamidalion</value>
   </data>
   <data name="Sites" xml:space="preserve">
     <value>Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/</value>
