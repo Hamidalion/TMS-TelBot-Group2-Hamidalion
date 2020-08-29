@@ -61,16 +61,8 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /about.
-        /// </summary>
-        public static string Link {
-            get {
-                return ResourceManager.GetString("Link", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Здравствуйте. .
+        ///   Ищет локализованную строку, похожую на Здравствуйте.
+        ///.
         /// </summary>
         public static string Message {
             get {
@@ -79,7 +71,8 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Этот телеграм бот покажет Вам действительный курс валют в РБ согласно курса Национального банка. Покажет Вам курсы популярных банков и покажет наилуший для покупки..
+        ///   Ищет локализованную строку, похожую на Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилуший для покупки.
+        ///.
         /// </summary>
         public static string Message2 {
             get {
@@ -88,7 +81,10 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Команды:.
+        ///   Ищет локализованную строку, похожую на Команды: /start
+        ///                     /banks  
+        ///                     /ratesnow
+        ///                     /ratesondate (например  /ratesondate 12.03.2019).
         /// </summary>
         public static string Message3 {
             get {
@@ -97,11 +93,32 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Creators of KAI: Екатерина - @Lesnoybolvan2, Артур - @dakamakat , Илья - @Hamidalion.
+        ///   Ищет локализованную строку, похожую на Над ботом работали: 
+        ///                     Екатерина @Lesnoybolvan2 
+        ///                     Артур @dakamakat  
+        ///                     Илья @Hamidalion.
         /// </summary>
         public static string Message4 {
             get {
                 return ResourceManager.GetString("Message4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/.
+        /// </summary>
+        public static string Sites {
+            get {
+                return ResourceManager.GetString("Sites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на /start.
+        /// </summary>
+        public static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
             }
         }
     }

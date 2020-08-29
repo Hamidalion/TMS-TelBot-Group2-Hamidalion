@@ -1,11 +1,7 @@
 ﻿using KAI_bank_bot.Interfaces;
-using KAI_bank_bot.Models;
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -20,21 +16,36 @@ namespace KAI_bank_bot.Commands
         public string Name { get; } = Banks.Link;
 
         /// <inheritdoc/>
-        public bool Contains(Message message) => message.Type == MessageType.Text && message.Text.Contains(Name);
-
-        /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            var chatId = message.Chat.Id;
-            IMyFinParsingService myFinParsingService = new MyFinParsingService();
-            List<BankCurrencies> bankCurrencies = (List<BankCurrencies>)await myFinParsingService.Parse();
-            StringBuilder botMessage = new StringBuilder(Banks.Message);
-            botMessage.Append(Banks.TableHeader);
-            foreach(var b in bankCurrencies)
+            try
             {
-                botMessage.Append(b.ToString() + "\n");
+                MinskBankService minskBankService = new MinskBankService();
+                var chatId = message.Chat.Id;
+                var result = await minskBankService.GetMinskRates();
+                foreach (var bank in result)
+                {
+                    await client.SendTextMessageAsync(chatId, $"Имя банка: {bank.BankName}\nEUR : Продажа - {bank.EURSaleRate} Покупка - {bank.EURBuyRate}\n" +
+                        $"USD: Продажа - {bank.USDSaleRate} Покупка - {bank.USDBuyRate}\nRUB : Продажа - {bank.RUBSaleRate} Покупка - {bank.EURBuyRate}\n" );
+                        //$"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD: Покупка - {bank.EURToUSDBuyRate}\n");
+                }
             }
-            await client.SendTextMessageAsync(chatId, botMessage.ToString(), ParseMode.Html);
+            catch (Exception)
+            {
+                var chatId = message.Chat.Id;
+                await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+            }
+           
+        }
+
+        /// <inheritdoc/>
+        public bool Contains(Message message)
+        {
+            if(message != null)
+            {
+                return message.Type == MessageType.Text && message.Text.Contains(Name);
+            }
+            return false;
         }
     }
 }

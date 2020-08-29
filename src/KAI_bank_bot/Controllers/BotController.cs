@@ -1,5 +1,4 @@
 ﻿using KAI_bank_bot.Interfaces;
-using KAI_bank_bot.Resources;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -41,7 +40,6 @@ namespace KAI_bank_bot.Controllers
 
             var message = update.Message;
 
-            Console.WriteLine(string.Format(Common.Message, message.Chat.Id, message.Text));
 
             foreach (var command in _commandService.Get())
             {
