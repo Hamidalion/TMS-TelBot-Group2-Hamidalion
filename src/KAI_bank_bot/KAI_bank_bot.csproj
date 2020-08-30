@@ -33,20 +33,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Currencies.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Exeptions.Designer.cs">
+    <Compile Update="Resources\Exceptions.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Exeptions.resx</DependentUpon>
+      <DependentUpon>Exceptions.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\RatesToday.Designer.cs">
+    <Compile Update="Resources\RatesNow.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>RatesToday.resx</DependentUpon>
+      <DependentUpon>RatesNow.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\RatesDate.Designer.cs">
+    <Compile Update="Resources\RatesOnDate.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>RatesDate.resx</DependentUpon>
+      <DependentUpon>RatesOnDate.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Common.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Common.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -63,17 +68,21 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Currencies.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Exeptions.resx">
+    <EmbeddedResource Update="Resources\Exceptions.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Exeptions.Designer.cs</LastGenOutput>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\RatesToday.resx">
+    <EmbeddedResource Update="Resources\RatesNow.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RatesToday.Designer.cs</LastGenOutput>
+      <LastGenOutput>RatesNow.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\RatesDate.resx">
+    <EmbeddedResource Update="Resources\RatesOnDate.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>RatesDate.Designer.cs</LastGenOutput>
+      <LastGenOutput>RatesOnDate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -6,25 +6,23 @@ using KAI_bank_bot.Models;
 namespace KAI_bank_bot.Interfaces
 {
     /// <summary>
-    /// Сервис для отправки запросов.
+    /// Service for sending requests 
     /// </summary>
     public interface IRequestService
     {
-      
         /// <summary>
-        /// Получить курс валюты.
+        /// Get currency rate for today
         /// </summary>
-        /// <param name="code">Код валюты.</param>
-        /// <returns>Курс валюты.</returns>
+        /// <param name="code">Currency code</param>
+        /// <returns>Currency rate</returns>
         Task<Rate> GetRateAsync(string code);
 
         /// <summary>
-        /// Получить курс валюты на определенную дату (как расширение)
+        /// Get currency rate on date 
         /// </summary>
-        /// <param name="code">Код валюты.</param>
-        /// <param name="date">Дата.</param>
-        /// <returns>Курс валюты.</returns>
-        
+        /// <param name="code">Currency code</param>
+        /// <param name="date">Date</param>
+        /// <returns>Currency rate</returns>
         Task<Rate> GetRateByDateAsync(string code, DateTime date);
     }
 }

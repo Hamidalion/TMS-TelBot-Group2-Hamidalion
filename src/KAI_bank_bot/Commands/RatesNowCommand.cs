@@ -9,9 +9,9 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
-    public class RatesNow : ITelegramCommand
+    public class RatesNowCommand : ITelegramCommand
     {
-        public string Name { get; } = RatesToday.Name;
+        public string Name { get; } = RatesNow.Name;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
@@ -29,18 +29,11 @@ namespace KAI_bank_bot.Commands
             catch (Exception)
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+                await client.SendTextMessageAsync(chatId, Exceptions.OtherExeption);
             }
            
         }
         /// <inheritdoc/>   
-        public bool Contains(Message message)
-        {
-            if (message != null)
-            {
-                return message.Type == MessageType.Text && message.Text.Contains(Name);
-            }
-            return false;
-        }
+        public bool Contains(Message message) => message != null && message.Type == MessageType.Text && message.Text.Contains(Name);
     }
 }

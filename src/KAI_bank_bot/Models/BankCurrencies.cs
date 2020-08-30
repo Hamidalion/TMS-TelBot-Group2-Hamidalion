@@ -4,6 +4,10 @@ using System.Globalization;
 
 namespace KAI_bank_bot.Models
 {
+    /// <summary>
+    /// Main model for MyFinParsingService
+    /// Contains all properties
+    /// </summary>
     public class BankCurrencies
     {
         public string BankName { get; set; }
@@ -16,6 +20,11 @@ namespace KAI_bank_bot.Models
         public double EURToUSDBuyRate { get; set; }
         public double EURToUSDSaleRate { get; set; }
 
+        /// <summary>
+        /// Parse BankCurrencies object from a string
+        /// </summary>
+        /// <param name="s">String for parsing</param>
+        /// <returns>Parsed BankCurrencies object</returns>
         public static BankCurrencies Parse(string s)
         {
             var elements = s.Split(Banks.Separator, StringSplitOptions.RemoveEmptyEntries);

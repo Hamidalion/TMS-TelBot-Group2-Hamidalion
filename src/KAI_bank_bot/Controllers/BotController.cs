@@ -40,7 +40,6 @@ namespace KAI_bank_bot.Controllers
 
             var message = update.Message;
 
-
             foreach (var command in _commandService.Get())
             {
                 if (command.Contains(message))
@@ -49,7 +48,6 @@ namespace KAI_bank_bot.Controllers
                     break;
                 }
             }
-
             return Ok();
         }
     }

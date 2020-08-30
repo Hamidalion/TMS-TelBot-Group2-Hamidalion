@@ -117,30 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Message" xml:space="preserve">
-    <value>Здравствуйте</value>
+  <data name="DateExeption" xml:space="preserve">
+    <value>Данных на эту дату нет</value>
   </data>
-  <data name="Message2" xml:space="preserve">
-    <value>Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и поможет найти наилучший для покупки
-</value>
+  <data name="OtherExeption" xml:space="preserve">
+    <value />
   </data>
-  <data name="Message3" xml:space="preserve">
-    <value>Команды: 
-    /start
-    /banks  (формат /banks &lt;USD/RUB/EUR&gt; &lt;sale/buy&gt;) 
-    /ratesnow
-    /ratesondate (формат /ratesondate дд.мм.гггг ) </value>
-  </data>
-  <data name="Message4" xml:space="preserve">
-    <value>Над ботом работали: 
-    Екатерина @Lesnoybolvan2 
-    Артур @dakamakat  
-    Илья @Hamidalion</value>
-  </data>
-  <data name="Sites" xml:space="preserve">
-    <value>Used sites: 1 - https://myfin.by/ \n 2 - https://www.nbrb.by/</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>/start</value>
+  <data name="RangeExeption" xml:space="preserve">
+    <value>Введен неверный формат даты. Необходим следующий формат дата/месяц/год</value>
   </data>
 </root>

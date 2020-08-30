@@ -3,7 +3,8 @@
 namespace KAI_bank_bot.Models
 {
     /// <summary>
-    /// Курс.
+    /// Main model for RequestService
+    /// Contains all properties
     /// </summary>
     public class Rate
     {

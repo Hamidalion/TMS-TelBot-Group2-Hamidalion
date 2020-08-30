@@ -117,13 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DateExeption" xml:space="preserve">
-    <value>Данных на эту дату нет</value>
-  </data>
-  <data name="OtherExeption" xml:space="preserve">
-    <value>Введены неверные данные</value>
-  </data>
-  <data name="RangeExeption" xml:space="preserve">
-    <value>Введен неверный формат даты. Необходим следующий формат дата/месяц/год</value>
+  <data name="NbRBUrl" xml:space="preserve">
+    <value>https://www.nbrb.by/api</value>
   </data>
 </root>

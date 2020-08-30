@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace KAI_bank_bot.Services
 {
+    /// <summary>
+    /// Add rates from RequestService to list
+    /// </summary>
     public class NbrbRates
     {
+        
+        /// <summary>
+        /// Add rates on today to list
+        /// </summary>
+        /// <returns>List of rate odjects</returns>
         public async Task<List<Rate>> GetRateByNbrbOnToday()
         {
             IRequestService requestService = new RequestService();
@@ -20,6 +28,11 @@ namespace KAI_bank_bot.Services
             };
             return rates;
         }
+
+        /// <summary>
+        /// Add rates on same date to list
+        /// </summary>
+        /// <returns>List of rate odjects</returns>
         public async Task<List<Rate>> GetRateByNbrbOnDate(DateTime userDate)
         {
             IRequestService requestService = new RequestService();

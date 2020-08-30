@@ -1,24 +1,53 @@
 ﻿using KAI_bank_bot.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace KAI_bank_bot.Interfaces
 {
+    /// <summary>
+    /// Service for sorting Banks rates
+    /// </summary>
     interface ISortService
     {
-        List<BankCurrencies> sortByBestUSDBuyRate(List<BankCurrencies> bankCurrencies);
+        /// <summary>
+        /// Sort by best USD Buy Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBestUSDBuyRate(List<BankCurrencies> bankCurrencies);
 
-        List<BankCurrencies> sortByBesEURBuyRate(List<BankCurrencies> bankCurrencies);
+        /// <summary>
+        /// Sort by best EUR Buy Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBesEURBuyRate(List<BankCurrencies> bankCurrencies);
 
-        List<BankCurrencies> sortByBesRUBBuyRate(List<BankCurrencies> bankCurrencies);
+        /// <summary>
+        /// Sort by best RUB Buy Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBesRUBBuyRate(List<BankCurrencies> bankCurrencies);
 
-        List<BankCurrencies> sortByBestUSDSaleRate(List<BankCurrencies> bankCurrencies);
+        /// <summary>
+        /// Sort by best USD Sale Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBestUSDSaleRate(List<BankCurrencies> bankCurrencies);
 
-        List<BankCurrencies> sortByBestEURSaleRate(List<BankCurrencies> bankCurrencies);
+        /// <summary>
+        /// Sort by best EUR Sale Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBestEURSaleRate(List<BankCurrencies> bankCurrencies);
 
-        List<BankCurrencies> sortByBesRUBSaleRate(List<BankCurrencies> bankCurrencies);
-
+        /// <summary>
+        /// Sort by best RUB Sale Rate
+        /// </summary>
+        /// <param name="bankCurrencies">List for sorting</param>
+        /// <returns>Sorted list</returns>
+        List<BankCurrencies> SortByBesRUBSaleRate(List<BankCurrencies> bankCurrencies);
     }
 }

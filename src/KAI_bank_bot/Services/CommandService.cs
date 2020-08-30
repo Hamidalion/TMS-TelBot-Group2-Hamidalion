@@ -18,8 +18,8 @@ namespace KAI_bank_bot.Services
             {
                 new AboutCommand(),
                 new BanksCommand(),
-                new RatesNow(),
-                new RatesByDate()
+                new RatesNowCommand(),
+                new RatesonDateCommand()
             };
         }
 

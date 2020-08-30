@@ -4,7 +4,6 @@ using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -25,14 +24,13 @@ namespace KAI_bank_bot.Commands
             {
                 IMyFinParsingService myFinParsingService = new MyFinParsingService();
                 var chatId = message.Chat.Id;
-                var result = (List<BankCurrencies>) await myFinParsingService.Parse();
-
+                var result = (List<BankCurrencies>)await myFinParsingService.Parse();
                 var parametrs = message.Text.ToLower().Split(" ");
 
                 if (parametrs.Length == 3)
                 {
                     ISortService sortService = new SortService();
-                    
+
                     switch (parametrs[1])
                     {
                         case "usd":
@@ -41,14 +39,14 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = sortService.sortByBestUSDBuyRate(result);
+                                            result = sortService.SortByBestUSDBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                        result = sortService.sortByBestUSDSaleRate(result);
-                                        break;
-                                        }                                       
+                                            result = sortService.SortByBestUSDSaleRate(result);
+                                            break;
+                                        }
                                 }
                                 break;
                             }
@@ -59,12 +57,12 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = sortService.sortByBesEURBuyRate(result);
+                                            result = sortService.SortByBesEURBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                            result = sortService.sortByBestEURSaleRate(result);
+                                            result = sortService.SortByBestEURSaleRate(result);
                                             break;
                                         }
                                 }
@@ -77,12 +75,12 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = sortService.sortByBesRUBBuyRate(result);
+                                            result = sortService.SortByBesRUBBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                            result = sortService.sortByBesRUBSaleRate(result);
+                                            result = sortService.SortByBesRUBSaleRate(result);
                                             break;
                                         }
                                 }
@@ -100,20 +98,12 @@ namespace KAI_bank_bot.Commands
             catch (Exception e)
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+                await client.SendTextMessageAsync(chatId, Exceptions.OtherExeption);
                 Console.WriteLine(e.Message);
             }
-
         }
 
         /// <inheritdoc/>
-        public bool Contains(Message message)
-        {
-            if (message != null)
-            {
-                return message.Type == MessageType.Text && message.Text.Contains(Name);
-            }
-            return false;
-        }
+        public bool Contains(Message message) => message != null && message.Type == MessageType.Text && message.Text.Contains(Name);
     }
 }

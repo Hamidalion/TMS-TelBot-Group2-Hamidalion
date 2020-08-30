@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace KAI_bank_bot.Services
 {
+    /// <inheritdoc cref="IMyFinParsingService"/>
     public class MyFinParsingService : IMyFinParsingService
     {
+        /// <inheritdoc/>
         public async Task<IEnumerable<BankCurrencies>> Parse()
         {
             var banksCurrencies = new List<BankCurrencies>();

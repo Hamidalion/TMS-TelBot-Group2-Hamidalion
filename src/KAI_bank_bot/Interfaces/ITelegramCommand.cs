@@ -10,7 +10,7 @@ namespace KAI_bank_bot.Interfaces
     public interface ITelegramCommand
     {
         /// <summary>
-        /// Name.
+        /// Name
         /// </summary>
         string Name { get; }
 
