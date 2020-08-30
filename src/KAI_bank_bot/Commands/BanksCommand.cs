@@ -93,7 +93,7 @@ namespace KAI_bank_bot.Commands
                 {
                     await client.SendTextMessageAsync(chatId, $"\U0001F6A9{ bank.BankName} \U0001F6A9\n\U0001F4B0 Покупка / Продажа \U0001F4B0\n\U000020AC 1 EUR: " +
                         $"{bank.EURBuyRate} BYN / {bank.EURSaleRate} BYN \U000020AC\n" +
-                        $"\U000020BD 100 RUB: {bank.EURBuyRate} BYN / {bank.RUBSaleRate} BYN \U000020BD\n\U00000241 USD: {bank.USDBuyRate} BYN / {bank.USDSaleRate} BYN \U00000241\n");
+                        $"\U000020BD 100 RUB: {bank.EURBuyRate} BYN / {bank.RUBSaleRate} BYN \U000020BD\n\U00000024 USD: {bank.USDBuyRate} BYN / {bank.USDSaleRate} BYN \U00000024\n");
                 }
             }
             catch (Exception e)
