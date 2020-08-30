@@ -9,33 +9,34 @@ namespace KAI_bank_bot.Services
 {
     public class SortService : ISortService
     {
-        public IEnumerable<BankCurrencies> sortByBestUSDBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        public List<BankCurrencies> sortByBestUSDBuyRate(List<BankCurrencies> bankCurrencies)
         {
-            return bankCurrencies.OrderByDescending(b => b.USDBuyRate);
+            return bankCurrencies.OrderByDescending(b => b.USDBuyRate).ToList();
+
         }
 
-        public IEnumerable<BankCurrencies> sortByBesEURBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        public List<BankCurrencies> sortByBesEURBuyRate(List<BankCurrencies> bankCurrencies)
         {
-            return bankCurrencies.OrderByDescending(b => b.EURBuyRate);
+            return bankCurrencies.OrderByDescending(b => b.EURBuyRate).ToList();
         }
 
-        public IEnumerable<BankCurrencies> sortByBesRUBBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        public List<BankCurrencies> sortByBesRUBBuyRate(List<BankCurrencies> bankCurrencies)
         {
-            return bankCurrencies.OrderByDescending(b => b.RUBBuyRate);
+            return bankCurrencies.OrderByDescending(b => b.RUBBuyRate).ToList();
         }
-        public IEnumerable<BankCurrencies> sortByBestUSDSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
+        public List<BankCurrencies> sortByBestUSDSaleRate(List<BankCurrencies> bankCurrencies)
         {
-            return bankCurrencies.OrderBy(b => b.USDSaleRate);
-        }
-
-        public IEnumerable<BankCurrencies> sortByBestEURSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
-        {
-            return bankCurrencies.OrderBy(b => b.EURSaleRate);
+            return bankCurrencies.OrderBy(b => b.USDSaleRate).ToList();
         }
 
-        public IEnumerable<BankCurrencies> sortByBesRUBSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
+        public List<BankCurrencies> sortByBestEURSaleRate(List<BankCurrencies> bankCurrencies)
         {
-            return bankCurrencies.OrderBy(b => b.RUBSaleRate);
+            return bankCurrencies.OrderBy(b => b.EURSaleRate).ToList();
+        }
+
+        public List<BankCurrencies> sortByBesRUBSaleRate(List<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderBy(b => b.RUBSaleRate).ToList();
         }
 
     }

@@ -4,6 +4,7 @@ using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -22,9 +23,9 @@ namespace KAI_bank_bot.Commands
         {
             try
             {
-                MinskBankService minskBankService = new MinskBankService();
+                IMyFinParsingService myFinParsingService = new MyFinParsingService();
                 var chatId = message.Chat.Id;
-                var result = await minskBankService.GetMinskRates();
+                var result = (List<BankCurrencies>) await myFinParsingService.Parse();
 
                 var parametrs = message.Text.ToLower().Split(" ");
 
@@ -40,12 +41,12 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = (List<BankCurrencies>)sortService.sortByBestUSDBuyRate(result);
+                                            result = sortService.sortByBestUSDBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                        result = (List<BankCurrencies>)sortService.sortByBestUSDSaleRate(result);
+                                        result = sortService.sortByBestUSDSaleRate(result);
                                         break;
                                         }                                       
                                 }
@@ -58,12 +59,12 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = (List<BankCurrencies>)sortService.sortByBesEURBuyRate(result);
+                                            result = sortService.sortByBesEURBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                            result = (List<BankCurrencies>)sortService.sortByBestEURSaleRate(result);
+                                            result = sortService.sortByBestEURSaleRate(result);
                                             break;
                                         }
                                 }
@@ -76,12 +77,12 @@ namespace KAI_bank_bot.Commands
                                 {
                                     case "buy":
                                         {
-                                            result = (List<BankCurrencies>)sortService.sortByBesRUBBuyRate(result);
+                                            result = sortService.sortByBesRUBBuyRate(result);
                                             break;
                                         }
                                     case "sale":
                                         {
-                                            result = (List<BankCurrencies>)sortService.sortByBesRUBSaleRate(result);
+                                            result = sortService.sortByBesRUBSaleRate(result);
                                             break;
                                         }
                                 }
@@ -94,13 +95,13 @@ namespace KAI_bank_bot.Commands
                 {
                     await client.SendTextMessageAsync(chatId, $"{bank.BankName}\nПокупка/Продажа\n1 EUR: {bank.EURBuyRate} BYN / {bank.EURSaleRate} BYN \n" +
                         $"100 RUB: {bank.EURBuyRate} BYN / {bank.RUBSaleRate} BYN \n1 USD: {bank.USDBuyRate} BYN / {bank.USDSaleRate} BYN \n");
-                    //$"EUR к USD:Продажа - {bank.EURToUSDSaleRate} EUR к USD: Покупка - {bank.EURToUSDBuyRate}\n");
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 var chatId = message.Chat.Id;
                 await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
+                Console.WriteLine(e.Message);
             }
 
         }

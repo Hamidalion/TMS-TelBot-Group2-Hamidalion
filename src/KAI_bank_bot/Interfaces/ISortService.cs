@@ -8,17 +8,17 @@ namespace KAI_bank_bot.Interfaces
 {
     interface ISortService
     {
-         IEnumerable<BankCurrencies> sortByBestUSDBuyRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBestUSDBuyRate(List<BankCurrencies> bankCurrencies);
 
-         IEnumerable<BankCurrencies> sortByBesEURBuyRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBesEURBuyRate(List<BankCurrencies> bankCurrencies);
 
-         IEnumerable<BankCurrencies> sortByBesRUBBuyRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBesRUBBuyRate(List<BankCurrencies> bankCurrencies);
 
-         IEnumerable<BankCurrencies> sortByBestUSDSaleRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBestUSDSaleRate(List<BankCurrencies> bankCurrencies);
 
-         IEnumerable<BankCurrencies> sortByBestEURSaleRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBestEURSaleRate(List<BankCurrencies> bankCurrencies);
 
-         IEnumerable<BankCurrencies> sortByBesRUBSaleRate(IEnumerable<BankCurrencies> bankCurrencies);
+        List<BankCurrencies> sortByBesRUBSaleRate(List<BankCurrencies> bankCurrencies);
 
     }
 }
