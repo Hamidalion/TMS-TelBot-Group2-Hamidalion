@@ -121,15 +121,15 @@
     <value>Здравствуйте</value>
   </data>
   <data name="Message2" xml:space="preserve">
-    <value>Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и покажет наилучший для покупки
+    <value>Этот телеграм бот покажет Вам действительный курс валют в Республике Беларусь в соответствии с курсом Национального банка. Покажет Вам курсы банков и поможет найти наилучший для покупки
 </value>
   </data>
   <data name="Message3" xml:space="preserve">
     <value>Команды: 
     /start
-    /banks  
+    /banks  (например /banks USD sale) 
     /ratesnow
-    /ratesondate (например  /ratesondate 12.03.2019)</value>
+    /ratesondate (формат /ratesondate дд.мм.гггг ) </value>
   </data>
   <data name="Message4" xml:space="preserve">
     <value>Над ботом работали: 
