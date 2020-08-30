@@ -120,7 +120,7 @@
   <data name="About" xml:space="preserve">
     <value>Команда получает курс валют от нац банка РБ на указанную дату</value>
   </data>
-  <data name="Name" xml:space="preserve">
+  <data name="Link" xml:space="preserve">
     <value>/ratesondate</value>
   </data>
 </root>

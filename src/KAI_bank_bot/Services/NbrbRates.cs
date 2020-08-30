@@ -46,6 +46,5 @@ namespace KAI_bank_bot.Services
             }
             return null;
         }
-
     }
 }

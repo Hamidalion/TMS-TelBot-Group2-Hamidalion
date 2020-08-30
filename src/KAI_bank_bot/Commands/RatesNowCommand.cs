@@ -9,9 +9,10 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
+    /// <inheritdoc cref="ITelegramCommand"/>
     public class RatesNowCommand : ITelegramCommand
     {
-        public string Name { get; } = RatesNow.Name;
+        public string Name { get; } = RatesNow.Link;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)

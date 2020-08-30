@@ -23,10 +23,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Banks.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\About.Designer.cs">
+    <Compile Update="Resources\Start.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>About.resx</DependentUpon>
+      <DependentUpon>Start.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\Currencies.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -60,9 +60,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Banks.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\About.resx">
+    <EmbeddedResource Update="Resources\Start.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>About.Designer.cs</LastGenOutput>
+      <LastGenOutput>Start.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Currencies.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

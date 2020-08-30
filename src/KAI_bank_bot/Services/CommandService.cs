@@ -16,10 +16,10 @@ namespace KAI_bank_bot.Services
         {
             _commands = new List<ITelegramCommand>
             {
-                new AboutCommand(),
+                new StartCommand(),
                 new BanksCommand(),
                 new RatesNowCommand(),
-                new RatesonDateCommand()
+                new RatesOnDateCommand()
             };
         }
 

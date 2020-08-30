@@ -9,10 +9,10 @@ using Telegram.Bot.Types.Enums;
 namespace KAI_bank_bot.Commands
 {
     /// <inheritdoc cref="ITelegramCommand"/>
-    public class AboutCommand : ITelegramCommand
+    public class StartCommand : ITelegramCommand
     {
         /// <inheritdoc/>
-        public string Name { get; } = About.Start;
+        public string Name { get; } = Start.Link;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
@@ -20,7 +20,7 @@ namespace KAI_bank_bot.Commands
             try
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId,$"{About.Message}\U0001F44B\n{About.Message2}\n{About.Message3}\n\n{About.Message4}\n");
+                await client.SendTextMessageAsync(chatId,$"{Start.Message}\U0001F44B\n{Start.Message2}\n{Start.Message3}\n\n{Start.Message4}\n");
             }
             catch (Exception)
             {

@@ -72,9 +72,9 @@ namespace KAI_bank_bot.Resources {
         /// <summary>
         ///   Ищет локализованную строку, похожую на /ratesondate.
         /// </summary>
-        public static string Name {
+        public static string Link {
             get {
-                return ResourceManager.GetString("Name", resourceCulture);
+                return ResourceManager.GetString("Link", resourceCulture);
             }
         }
     }

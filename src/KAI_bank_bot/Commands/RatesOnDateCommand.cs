@@ -9,9 +9,10 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
-    public class RatesonDateCommand : ITelegramCommand
+    /// <inheritdoc cref="ITelegramCommand"/>
+    public class RatesOnDateCommand : ITelegramCommand
     {
-        public string Name { get; } = RatesNow.Name;
+        public string Name { get; } = RatesOnDate.Link;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
@@ -27,7 +28,7 @@ namespace KAI_bank_bot.Commands
                     var result = await nbrbRate.GetRateByNbrbOnDate(userDate);
                     foreach (var rate in result)
                     {
-                        await client.SendTextMessageAsync(chatId, $"{rate.Cur_Name}\n{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate} BYN\nДата : {rate.Date}\n\n");
+                        await client.SendTextMessageAsync(chatId, $"{rate.Cur_Scale} {rate.Cur_Abbreviation} = {rate.Cur_OfficialRate} BYN\nДата : {rate.Date}\n\n");
                     }
                 }
                 else
