@@ -63,27 +63,36 @@ namespace KAI_bank_bot.Resources {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Данных на эту дату нет.
         /// </summary>
-        public static string DateExeption {
+        public static string DateExсeption {
             get {
-                return ResourceManager.GetString("DateExeption", resourceCulture);
+                return ResourceManager.GetString("DateExсeption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Превышено время ожидания.
         /// </summary>
-        public static string OtherExeption {
+        public static string ExсeptionTimeOut {
             get {
-                return ResourceManager.GetString("OtherExeption", resourceCulture);
+                return ResourceManager.GetString("ExсeptionTimeOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Неверно указана дата, пробуй заново.
+        /// </summary>
+        public static string OtherExсeption {
+            get {
+                return ResourceManager.GetString("OtherExсeption", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Введен неверный формат даты. Необходим следующий формат дата/месяц/год.
         /// </summary>
-        public static string RangeExeption {
+        public static string RangeExсeption {
             get {
-                return ResourceManager.GetString("RangeExeption", resourceCulture);
+                return ResourceManager.GetString("RangeExсeption", resourceCulture);
             }
         }
     }

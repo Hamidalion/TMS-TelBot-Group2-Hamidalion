@@ -24,7 +24,7 @@ namespace KAI_bank_bot.Services
             }
             catch (FlurlHttpTimeoutException)
             {
-                Console.WriteLine("Request timed out ");
+                Console.WriteLine(Exceptions.ExсeptionTimeOut);
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace KAI_bank_bot.Services
             }
             catch (FlurlHttpTimeoutException)
             {
-                Console.WriteLine("Request timed out ");
+                Console.WriteLine(Exceptions.ExсeptionTimeOut);
             }
             catch (Exception ex)
             {

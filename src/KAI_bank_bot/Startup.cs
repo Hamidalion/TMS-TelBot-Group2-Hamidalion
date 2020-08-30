@@ -36,13 +36,8 @@ namespace KAI_bank_bot
 
         public void Configure(IApplicationBuilder app)
         {
-            //страница разработчика 
             app.UseDeveloperExceptionPage();
-
-            //добавляем возможности маршрутизации
             app.UseRouting();
-
-            // устанавливаем адреса, которые будут обрабатываться
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();

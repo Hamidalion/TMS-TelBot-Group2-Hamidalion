@@ -25,7 +25,7 @@ namespace KAI_bank_bot.Commands
             catch (Exception)
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, Exceptions.OtherExeption);
+                await client.SendTextMessageAsync(chatId, Exceptions.OtherExсeption);
             }
         }
 

@@ -32,18 +32,18 @@ namespace KAI_bank_bot.Commands
                 }
                 else
                 {
-                    await client.SendTextMessageAsync(chatId, Exceptions.RangeExeption);
+                    await client.SendTextMessageAsync(chatId, Exceptions.RangeExсeption);
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, Exceptions.RangeExeption);
+                await client.SendTextMessageAsync(chatId, Exceptions.RangeExсeption);
             }
             catch (Exception)
             {
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId, Exceptions.OtherExeption);
+                await client.SendTextMessageAsync(chatId, Exceptions.OtherExсeption);
             }
             
         }
