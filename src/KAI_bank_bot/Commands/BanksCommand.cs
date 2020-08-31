@@ -1,7 +1,10 @@
 ﻿using KAI_bank_bot.Interfaces;
+using KAI_bank_bot.Models;
 using KAI_bank_bot.Resources;
 using KAI_bank_bot.Services;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -46,6 +49,37 @@ namespace KAI_bank_bot.Commands
                 return message.Type == MessageType.Text && message.Text.Contains(Name);
             }
             return false;
+        }
+
+
+        private IEnumerable<BankCurrencies> sortByBestUSDBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderByDescending(b => b.USDBuyRate);
+        }
+
+        private IEnumerable<BankCurrencies> sortByBestUSDSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderBy(b => b.USDSaleRate);
+        }
+
+        private IEnumerable<BankCurrencies> sortByBesEURBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderByDescending(b => b.EURBuyRate);
+        }
+
+        private IEnumerable<BankCurrencies> sortByBestEURSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderBy(b => b.EURSaleRate);
+        }
+
+        private IEnumerable<BankCurrencies> sortByBesRUBBuyRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderByDescending(b => b.RUBBuyRate);
+        }
+
+        private IEnumerable<BankCurrencies> sortByBesRUBSaleRate(IEnumerable<BankCurrencies> bankCurrencies)
+        {
+            return bankCurrencies.OrderBy(b => b.RUBSaleRate);
         }
     }
 }
