@@ -22,14 +22,14 @@ namespace KAI_bank_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Start {
+    public class RatesDate {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Start() {
+        internal RatesDate() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KAI_bank_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.Start", typeof(Start).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KAI_bank_bot.Resources.RatesDate", typeof(RatesDate).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,20 @@ namespace KAI_bank_bot.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /start.
+        ///   Ищет локализованную строку, похожую на Команда получает курс валют от нац банка РБ на указанную дату.
         /// </summary>
-        public static string Link {
+        public static string About {
             get {
-                return ResourceManager.GetString("Link", resourceCulture);
+                return ResourceManager.GetString("About", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Welcome! This telegram bot allows you to shorten the link you entered, just send it here. For details about the project, enter: /about. Have a nice day!.
+        ///   Ищет локализованную строку, похожую на /ratesondate.
         /// </summary>
-        public static string Message {
+        public static string Name {
             get {
-                return ResourceManager.GetString("Message", resourceCulture);
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
     }

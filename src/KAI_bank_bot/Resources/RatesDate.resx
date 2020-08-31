@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Link" xml:space="preserve">
-    <value>/start</value>
+  <data name="About" xml:space="preserve">
+    <value>Команда получает курс валют от нац банка РБ на указанную дату</value>
   </data>
-  <data name="Message" xml:space="preserve">
-    <value>Welcome! This telegram bot allows you to shorten the link you entered, just send it here. For details about the project, enter: /about. Have a nice day!</value>
+  <data name="Name" xml:space="preserve">
+    <value>/ratesondate</value>
   </data>
 </root>

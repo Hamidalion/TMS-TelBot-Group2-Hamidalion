@@ -1,5 +1,6 @@
 ﻿using KAI_bank_bot.Interfaces;
 using KAI_bank_bot.Resources;
+using KAI_bank_bot.Services;
 using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -8,32 +9,34 @@ using Telegram.Bot.Types.Enums;
 
 namespace KAI_bank_bot.Commands
 {
-    /// <inheritdoc cref="ITelegramCommand"/>
-    public class AboutCommand : ITelegramCommand
+    public class RatesNow : ITelegramCommand
     {
-        /// <inheritdoc/>
-        public string Name { get; } = About.Start;
+        public string Name { get; } = RatesToday.Name;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             try
             {
+                NbrbRates nbrbRates = new NbrbRates();
                 var chatId = message.Chat.Id;
-                await client.SendTextMessageAsync(chatId,$"{About.Message}{About.Message2}\n{About.Message3}\n\n{About.Message4}\n");
+                var result = await nbrbRates.GetRateByNbrbOnToday();
+                foreach (var rate in result)
+                {
+                    await client.SendTextMessageAsync(chatId,  $" {rate.Cur_Scale} {rate.Cur_Name}  =  {rate.Cur_OfficialRate} Белорусских рублей  \n Дата : {rate.Date} \n \n");
+                }
             }
             catch (Exception)
             {
                 var chatId = message.Chat.Id;
                 await client.SendTextMessageAsync(chatId, Exeptions.OtherExeption);
             }
-          
+           
         }
-
-        /// <inheritdoc/>
+        /// <inheritdoc/>   
         public bool Contains(Message message)
         {
-            if(message != null)
+            if (message != null)
             {
                 return message.Type == MessageType.Text && message.Text.Contains(Name);
             }
