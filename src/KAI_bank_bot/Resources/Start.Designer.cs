@@ -91,6 +91,7 @@ namespace KAI_bank_bot.Resources {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Команды: 
         ///    /start
+        ///    /about
         ///    /banks  (формат /banks &lt;USD/RUB/EUR&gt; &lt;sale/buy&gt;) 
         ///    /ratesnow
         ///    /ratesondate (формат /ratesondate дд.мм.гггг ) .

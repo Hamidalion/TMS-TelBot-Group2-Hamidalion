@@ -130,6 +130,7 @@
   <data name="Message3" xml:space="preserve">
     <value>Команды: 
     /start
+    /about
     /banks  (формат /banks &lt;USD/RUB/EUR&gt; &lt;sale/buy&gt;) 
     /ratesnow
     /ratesondate (формат /ratesondate дд.мм.гггг ) </value>
