@@ -53,3 +53,7 @@ heroku container:release web -a short-link-generator-bot
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/MikhailMasny/short-link-telegram-bot/blob/master/LICENSE) file for details.
+
+## Link
+
+@KAI_bank_bot
