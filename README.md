@@ -56,4 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Link
 
-https://web.telegram.org/#/im?p=@KAI_bank_bot
+https://web.telegram.org    @KAI_bank_bot
